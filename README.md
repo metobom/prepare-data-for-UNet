@@ -9,13 +9,26 @@ After you git clone labelme repo to your computer you just need to type 'labelme
 
 1- After you finish labelling your images labelme outputs color mask. But UNet takes binary mask as input.
 
-2- Put your color masks to mask_inputs folder. Then run prepare_masks.py file. (Careful, images should be like 000, 001, .... otherwise outputs won't be in order. You can use renamer.py to do this.)
+2- To get binary masks put your color masks to mask_inputs folder. Then run prepare_masks.py file. (Careful, images should be like 000, 001, .... otherwise outputs won't be in order. You can use renamer.py to do this.)
 
-3- Outputs will be in mask_outputs folder.
+3- Outputs will be in mask_outputs folder. 
 
-4- If you need to change masks names like 0, 1, 2... just run renamer.py after you complete converting.
-
-5- Now your data is ready to put UNet.
+4- I put some images to mask_inputs for you to test.
 
 labelme: https://github.com/wkentaro/labelme
 
+# Tutorial for renamer
+This file is for renaming each image in a folder.
+
+1- Put your images to renamer inputs and run the code. Careful, outputs will ve overwritten to your inputs in same folder.
+
+# Tutorial for preprocess
+This file is specific for my data. My data was pretty low quality and dirty. To get good outputs I used equalizeHist method and blurred images. As output I get the patterns I wanted. You should play with this file for your dataset.
+
+# Data augmentation 
+I used zhixuhao's augmentation code. But I changed parameteres for my data.
+
+# Finally...
+Remember all your images must be in same size. After getting clear input images and binary mask you are good to go to train your data.
+
+NOT: Eğer İngilizce sıkıntısı çekiyorsanız Türkçe olarak bir issue açabilirsiniz.
