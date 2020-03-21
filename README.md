@@ -25,10 +25,13 @@ This file is for renaming each image in a folder.
 # Tutorial for preprocess
 This file is specific for my data. My data was pretty low quality and dirty. To get good outputs I used equalizeHist method and blurred images. As output I get the patterns I wanted. You should play with this file for your dataset.
 
+1- Put your images to preprocess_inputs. Outputs will be in preprocess_outputs.
+
 # Data augmentation 
 I used zhixuhao's augmentation code. But I changed parameteres for my data.
 
 # Finally...
 Remember all your images must be in same size. After getting clear input images and binary mask you are good to go to train your data.
+NOTE: I had 34 images. With augmentation I had 68 images to train. Check out my repos for UNet (not completed)  
 
 NOT: Eğer İngilizce sıkıntısı çekiyorsanız Türkçe olarak bir issue açabilirsiniz.
