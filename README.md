@@ -17,4 +17,6 @@ After you git clone labelme repo to your computer you just need to type 'labelme
 
 5- Now your data is ready to put UNet.
 
+NOT COMPLETED
+
 labelme: https://github.com/wkentaro/labelme
