@@ -1,5 +1,6 @@
 # prepare-data-for-UNet
 This repo contains how I prepared my data for zhixuhao's UNet implemention
+NOT: Eğer İngilizce sıkıntısı çekiyorsanız Türkçe olarak bir issue açabilir ya da bana mail atabilirsiniz. metobomm@gmail.com
 
 zhixuhao's implemention: https://github.com/zhixuhao/unet
 
@@ -30,8 +31,24 @@ This file is specific for my data. My data was pretty low quality and dirty. To 
 # Data augmentation 
 I used zhixuhao's augmentation code. But I changed parameteres for my data.
 
-# Finally...
-Remember all your images must be in same size. After getting clear input images and binary mask you are good to go to train your data.
-NOTE: I had 34 images. With augmentation I had 68 images to train. Check out my repos for UNet (not completed)  
+1- Git clone zhixuhao's unet repo. (https://github.com/zhixuhao/unet)
 
-NOT: Eğer İngilizce sıkıntısı çekiyorsanız Türkçe olarak bir issue açabilirsiniz.
+2- Create a path for your images, labels, tests and augmentations inside data folder. (You can delete membrane if you won't train that dataset)
+
+3- Put your images to image path, masks to label path, test images to test path and left augmentation path empty.
+
+4- Go to dataPrepare.ipynb (convert it to .py file if you don't like notebook.) and specify your paths.
+
+5- Run the notebook. Outputs will be in your augment path. Split images and masks to your image and mask paths again.
+
+# Training 
+
+1- In zhixuhao's repo, open trainUnet.ipynb (convert it to .py file if you don't like notebook) and specify your paths.
+
+2- Again in same notebook specify your batch size, steps, epoch and weight file name. Weight file should be in .hdf5 format.
+
+3- Run the notebook cell by cell. After training completed in last cell you can test your weights. Test outputs will be in folder that you specified. I put test_imgs.py to my repo. You can test your weights with it too.
+
+# Finally...
+Remember all your images must be in same size. Also I was keep getting full gray, black or wrong outputs. I solved it by preprocessing and increasing my image number by 5 (29 to 34). You can see one of my test results in my repo.
+
