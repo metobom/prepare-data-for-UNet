@@ -1,5 +1,6 @@
 # prepare-data-for-UNet
 This repo contains how I prepared my data for zhixuhao's UNet implemention
+
 NOT: Eğer İngilizce sıkıntısı çekiyorsanız Türkçe olarak bir issue açabilir ya da bana mail atabilirsiniz. metobomm@gmail.com
 
 zhixuhao's implemention: https://github.com/zhixuhao/unet
