@@ -51,5 +51,5 @@ I used zhixuhao's augmentation code. But I changed parameteres for my data.
 3- Run the notebook cell by cell. After training completed in last cell you can test your weights. Test outputs will be in folder that you specified. I put test_imgs.py to my repo. You can test your weights with it too.
 
 # Finally...
-Remember all your images must be in same size. Also I was keep getting full gray, black or wrong outputs. I solved it by preprocessing and increasing my image number by 5 (29 to 34). You can see one of my test results in my repo.
+Remember all your images must be in same size. Also I was keep getting full gray, black or wrong outputs. I solved it by preprocessing and increasing my image number by 5 (29 to 34). You can see one of my test results in my repo (2 batch size, 2000 steps and 2 epoch).
 
